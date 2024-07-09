@@ -7,8 +7,11 @@ import Input from './Components/Input'
 const App = () => {
   return (
     <>
+    <div className='text-blue-500'>
     <NavBar/>
-      <Input/>
+    <Input/>
+    </div>
+  
     </>
   )
 }
