@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './Components/NavBar'
 import Input from './Components/Input'
-import AddTask from './Components/AddTask'
+
 
 
 const App = () => {
@@ -9,10 +9,6 @@ const App = () => {
     <>
     <NavBar/>
       <Input/>
-    <AddTask/>
-    <AddTask/>
-    <AddTask/>
-    <AddTask/>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { IoClose } from "react-icons/io5";
-const AddTask = () => {
+const AddTask = (props) => {
+
     return (
         <>
             <div className='flex justify-center items-center mt-5  '>
@@ -8,7 +9,7 @@ const AddTask = () => {
                     <label className='flex justify-center items-center'>
                         <input type="checkbox" className='mr-2 w-[1rem] h-[1rem] accent-blue-500 ' />
                         <p className='line-through'>
-                            add task
+                            {props.name}
                         </p>
                     </label>
                     <div className='cursor-pointer '>
