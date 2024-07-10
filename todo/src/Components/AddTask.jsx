@@ -13,15 +13,15 @@ var selected =selectRef.current.checked
     return (
         <>
             <div className='flex justify-center items-center mt-5  '>
-                <div className='md:w-[800px] flex justify-between bg-slate-300 rounded-md p-3 items-center content-center'>
+                <div className='md:w-[800px] flex justify-between bg-sky-400 rounded-md p-3 items-center content-center'>
                     <label className='flex justify-center items-center'>
                         <input ref={selectRef} type="checkbox" onChange={TaskCompleteHandle} className='mr-2 w-[1rem] h-[1rem] accent-blue-500 ' />
                         <p className={Selected ? 'line-through':''}>
                             {props.name}
                         </p>
                     </label>
-                    <div className={Selected ? 'block cursor-pointer':'hidden cursor-pointer'}>
-                        <IoClose  className='text-2xl active:text-red-400' onClick={props.eventMethod} />
+                    <div className={Selected ? 'block  cursor-pointer':'hidden cursor-pointer'}>
+                        <IoClose  className='text-2xl text-black active:text-red-400' onClick={props.eventMethod} />
                     </div>
                 </div>
             </div >

@@ -11,13 +11,22 @@ const Input = () => {
             return;
         }
         var getData = [{ value: getTask }, ...Arr]
+        localStorage.setItem('task', JSON.stringify(getData));
         setArr(getData);
         InputElement.current.value = ""
     }
     const DelectedTaskHandle = (i) => {
-        var data = Arr.filter((arr, is) =>is !== i);
+        const task = JSON.parse(localStorage.getItem('task'));
+        var data = task.filter((arr, is) =>is !== i);
+        localStorage.setItem('task', JSON.stringify(data));
         setArr(data);
     }
+    useEffect(() => {
+        const task = JSON.parse(localStorage.getItem('task'));
+        if (task) {
+            setArr(task);
+        }
+      }, []);
     return (
         <>
 
